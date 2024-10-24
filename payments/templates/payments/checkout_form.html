@@ -1,0 +1,7 @@
+<form method="POST" action="{{ request_url }}">
+    {% csrf_token %}
+    {% for name, value in params.items %}
+        <input type="hidden" name="{{ name }}" value="{{ value }}">
+    {% endfor %}
+    <input type="submit" value="Proceed to Payment">
+</form>
